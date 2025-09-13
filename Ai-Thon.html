@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Campus Assistant</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #080b3c, #000DFF);
+            background-image: url(data:image/jpeg;base64,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);
+            background-repeat: no-repeat;
+            color: #f0f0f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: rgba(147, 8, 38, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(181, 20, 20, 0.5);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+            color: #0d0602;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            color: #000;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px;
+            width: 250px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: scale(1.05);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: #FFDD57;
+        }
+
+        .feature-card p {
+            font-size: 1em;
+            line-height: 1.5;
+
+        }
+
+        .chatbot-container {
+            margin-top: 40px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .chatbox {
+            max-height: 300px;
+            overflow-y: auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .message {
+            margin: 10px 0;
+        }
+
+        .message.user {
+            text-align: right;
+            color: #FFD700;
+        }
+
+        .message.bot {
+            text-align: left;
+            color: #00FFAA;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-right: 10px;
+            font-size: 1em;
+        }
+
+        button {
+            background-color: #FFD700;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #FFAA00;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            background: rgba(0, 0, 0, 0.7);
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Smart Campus Assistant</h1>
+        <p>Your AI-powered chatbot for campus info, schedules, dining, and more</p>
+    </header>
+
+    <div class="container">
+        <h2>Main Features</h2>
+        <div class="features">
+            <div class="feature-card">
+                <h3>📚 Campus Info</h3>
+                <p>Real-time info about class schedules, library services, and campus facilities.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🍔 Dining Services</h3>
+                <p>Discover dining menus, operating hours, and cafeteria orders seamlessly.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>📋 Admin Procedures</h3>
+                <p>Access leave applications, fee payments, certificates, and other services.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>💬 Conversational AI</h3>
+                <p>Chat anytime for personalized campus help and answers.</p>
+            </div>
+        </div>
+
+        <div class="chatbot-container">
+            <h2>Chat with Smart Assistant</h2>
+            <div class="chatbox" id="chatbox"></div>
+            <div style="text-align: center;">
+                <input type="text" id="userInput" placeholder="Ask me about campus..." />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 AI-Thon 2K25 | Developed by Innovative Minds
+    </footer>
+
+    <script>
+        function sendMessage() {
+            const input = document.getElementById('userInput');
+            const message = input.value.trim();
+            if (message === '') return;
+
+            const chatbox = document.getElementById('chatbox');
+
+            // Display user message
+            const userMessage = document.createElement('div');
+            userMessage.classList.add('message', 'user');
+            userMessage.textContent = message;
+            chatbox.appendChild(userMessage);
+
+            // Simulate bot response after a short delay
+            setTimeout(() => {
+                const botMessage = document.createElement('div');
+                botMessage.classList.add('message', 'bot');
+                botMessage.textContent = getBotResponse(message);
+                chatbox.appendChild(botMessage);
+
+                // Scroll to bottom
+                chatbox.scrollTop = chatbox.scrollHeight;
+            }, 1000);
+
+            input.value = '';
+        }
+
+        function getBotResponse(userText) {
+            userText = userText.toLowerCase();
+            if (userText.includes('schedule')) return "📅 Your next class is at 10 AM in Room 101.";
+            if (userText.includes('library')) return "📚 The library is open from 8 AM to 8 PM daily.";
+            if (userText.includes('dining')) return "🍔 Today's special menu: Veg Biryani and Lemonade.";
+            if (userText.includes('certificate')) return "📝 You can apply for certificates under the Admin section.";
+            return "🤖 I'm here to help! Please ask about schedules, library, dining, or admin procedures.";
+        }
+    </script>
+</body>
+ echo "# smart-campus-assistance" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/paduchurilikitha-code/smart-campus-assistance.git
+git push -u origin main
+</html>
